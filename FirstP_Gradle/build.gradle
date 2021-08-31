@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-beta-4'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.9';
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.9';
+    implementation group: 'com.microsoft.edge', name: 'msedge-selenium-tools-java', version: '3.141.0';
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
